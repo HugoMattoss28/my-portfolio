@@ -1,0 +1,126 @@
+:root {
+    --fundo: #080b12;
+    --texto: #f5f5f5;
+    --destaque: #6c8cff;
+    --cinza: #a0a0ad;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* MENU */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--destaque);
+}
+
+.menu {
+    display: flex;
+    gap: 45px;
+    list-style: none;
+}
+
+.menu a {
+    color: var(--texto);
+    text-decoration: none;
+}
+
+/* HOME */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.subtitulo {
+    color: var(--destaque);
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 78px);
+    max-width: 900px;
+    margin: 25px 0;
+}
+
+.hero h1 span {
+    color: var(--destaque);
+}
+
+.descricao {
+    color: var(--cinza);
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.descricao span {
+    color: var(--destaque);
+    font-family: "Pinyon Script", cursive;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 8px;
+    background: var(--destaque);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.secao {
+    min-height: 60vh;
+    padding: 100px 0;
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+}
